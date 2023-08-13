@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+<video autoplay muted loop id="bg-video">
+    <source src="/media/montana.mp4" type="video/mp4">
+</video>
+
+<div class="main_sec">
+    <div class="header">
+        <header id="header_in">
+            <label for="city-input"></label>
+            <input type="text" id="city-input" placeholder="Search bar (Cities)"
+                   onkeydown="if (keyCode === 13) searchCity()">
+            <div id="city-info"></div>
+        </header>
+        <div class="select_city"></div>
+        <div class="search_bar"></div>
+    </div>
+    <div class="container">
+        <div id="current_wea">
+            <h2>CURRENT WEATHER </h2>
+            <div id="con_wea">
+                <script src="current_weather.js"></script>
+            </div>
+        </div>
+        <div id="daily_fore">
+            <h2>DAILY FORECAST -5 DAYS </h2>
+            <div id="daily_con">
+                <div id="Day1">Day 1</div>
+                <div id="Day2">Day 2</div>
+                <div id="Day3">Day 3</div>
+                <div id="Day4">Day 4</div>
+                <div id="Day5">Day 5</div>
+            </div>
+            <div id="hour_ran">
+                <h2>3 HOURS RANGE</h2>
+                <div id="hour_con">
+                    <div id="0-3"></div>
+                    <div id="3-6"></div>
+                    <div id="6-9"></div>
+                    <div id="9-12"></div>
+                    <div id="12-15"></div>
+                    <div id="15-18"></div>
+                    <div id="18-21"></div>
+                    <div id="21-24"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="index.js"></script>
+</body>
+
+</html>
